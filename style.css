@@ -12,7 +12,7 @@ Naslovna ploca
 .naslovna-ploca {
     width: 100%;
     height: 100vh;
-    background: url("./demonic.jpg");
+    background: url("./naslovna-slika.jpg");
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center center;
@@ -106,6 +106,7 @@ Tijelo stranice
     text-decoration: none;
     color: rgb(30, 80, 124);
     font-size: 1.2rem;
+    display: block;
 }
 
 .sadrzaj-stranice {
