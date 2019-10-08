@@ -1,0 +1,145 @@
+* {
+    padding: 0;
+    margin: 0;
+    overflow-x: hidden;
+    font-size: 16px;
+}
+
+/*==============================================================================================
+Naslovna ploca
+==============================================================================================*/
+
+.naslovna-ploca {
+    width: 100%;
+    height: 100vh;
+    background: url("./demonic.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    display: flex;
+    flex-direction: column;
+    font-family: 'Oswald', sans-serif;
+}
+
+.naslovna-ploca-ikone {
+    display: flex;
+    flex-direction: row;
+    background: rgba(255, 255, 255, 0.4);
+    justify-content: flex-end;
+}
+
+.naslovna-ploca-ikone-item {
+    display: flex;
+    flex-direction: row;
+    margin-right: 1em;
+}
+
+.naslovna-ploca-ikone img {
+    padding: .2em .5em;
+}
+
+.naslovna-ploca-ikone p {
+    display: none;
+    padding-top: 3px;
+}
+
+.naslovna-ploca-naslov {
+    width: 80%;
+    max-width: 1000px;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.naslovna-ploca-naslov h1 {
+    text-align: center;
+    font-size: 8vw;
+    letter-spacing: .2rem;
+    color: white;
+    text-shadow: 1px 1px 8px rgba(0, 0, 0, 1);
+}
+
+.naslovna-ploca-naslov p {
+    width: 200px;
+    font-size: 1.4rem;
+    color: white;
+    margin: 0 auto;
+    text-shadow: 1px 1px 4px rgba(0, 0, 0, 1);
+    font-style: italic;
+}
+
+/*==============================================================================================
+Tijelo stranice
+==============================================================================================*/
+
+.tijelo-stranice {
+    width: 95%;
+    margin: 0 auto;
+    max-width: 1400px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.navigacija {
+    width: 140px;
+    display: flex;
+    flex-direction: column;
+}
+
+.navigacija ul {
+    font-family: 'Oswald', sans-serif;
+    margin-top: 5em;
+}
+
+.navigacija li {
+    padding: .3em 0;
+}
+
+.navigacija li:hover {
+    background: rgba(30, 80, 124, 0.116);
+    transition: .1s;
+}
+
+.navigacija a {
+    text-decoration: none;
+    color: rgb(30, 80, 124);
+    font-size: 1.2rem;
+}
+
+.sadrzaj-stranice {
+    width: 90%;
+}
+
+/*==============================================================================================
+Media queries
+==============================================================================================*/
+
+@media(min-width: 540px) {
+    .naslovna-ploca-ikone p {
+        display: block;
+    }
+}
+
+@media(min-width: 1000px) {
+    .naslovna-ploca-naslov h1 {
+        font-size: 5rem;
+    }
+}
+
+@media(max-width: 690px) {
+
+}
+
+/*==============================================================================================
+Ecwid tags
+==============================================================================================*/
+.horizontal-menu-parent {
+    display: flex;
+    flex-direction: column;
+}
+
+.horizontal-menu-item span {
+    font-size: 1.4em;
+}
