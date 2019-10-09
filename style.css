@@ -73,6 +73,25 @@ Naslovna ploca
 Tijelo stranice
 ==============================================================================================*/
 
+.bag-icon {
+    width: 50px;
+    margin: 1em 0em 0em 1em;
+}
+
+.hamburger {
+    position: absolute;
+    right: 1em;
+    top: 102vh;
+    width: 40px;
+}
+
+.crtica {
+    width: 30px;
+    height: 3px;
+    background: rgb(30, 80, 124);
+    margin: 5px;
+}
+
 .trazilica {
     margin: 0 auto;
     width: 300px;
