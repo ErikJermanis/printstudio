@@ -73,6 +73,11 @@ Naslovna ploca
 Tijelo stranice
 ==============================================================================================*/
 
+.trazilica {
+    margin: 0 auto;
+    width: 300px;
+}
+
 .tijelo-stranice {
     width: 95%;
     margin: 0 auto;
@@ -118,20 +123,33 @@ Tijelo stranice
 Media queries
 ==============================================================================================*/
 
-@media(min-width: 540px) {
+@media screen and (min-width: 540px) {
     .naslovna-ploca-ikone p {
         display: block;
     }
 }
 
-@media(min-width: 1000px) {
+@media screen and (min-width: 1000px) {
     .naslovna-ploca-naslov h1 {
         font-size: 5rem;
     }
 }
 
-@media(max-width: 690px) {
+@media screen and (max-width: 675px) {
+    .navigacija {
+        left: 0;
+        top: 100vh;
+        width: 100%;
+        height: 100%;
+        z-index: 1;
+        position: absolute;
+        background: rgb(72, 139, 201);
+        display: none;
+    }
 
+    .sadrzaj-stranice {
+        width: 100%;
+    }
 }
 
 /*==============================================================================================
