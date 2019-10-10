@@ -19,6 +19,7 @@ Naslovna ploca
     display: flex;
     flex-direction: column;
     font-family: 'Oswald', sans-serif;
+    font-weight: 300;
 }
 
 .naslovna-ploca-ikone {
@@ -106,6 +107,7 @@ Tijelo stranice
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+    border: 1px solid magenta;
 }
 
 .navigacija {
@@ -143,6 +145,40 @@ Tijelo stranice
 .sadrzaj-stranice {
     width: 90%;
     margin-top: 2em;
+}
+
+/*==============================================================================================
+Ostalo
+==============================================================================================*/
+
+.ostalo {
+    width: 95%;
+    margin: 0 auto;
+    max-width: 1150px;
+    display: flex;
+    flex-direction: column;
+    border: 1px solid magenta;
+}
+
+.ostalo h2 {
+    font-family: 'Oswald', sans-serif;
+    font-size: 1.6rem;
+    color: rgb(69, 85, 107);
+    font-weight: 300;
+    margin: auto auto 1em auto;
+}
+
+.mapouter {
+    text-align:right;
+    height:350px;
+    width:500px;
+}
+
+.gmap_canvas {
+    overflow:hidden;
+    background:none;
+    height:350px;
+    width:500px;
 }
 
 /*==============================================================================================
