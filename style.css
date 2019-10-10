@@ -84,6 +84,7 @@ Tijelo stranice
     top: 102vh;
     width: 35px;
     cursor: pointer;
+    visibility: hidden;
 }
 
 .crtica {
@@ -122,8 +123,13 @@ Tijelo stranice
     padding: .3em 0;
 }
 
-.navigacija li:hover {
-    background: rgba(30, 80, 124, 0.116);
+.navigacija li:nth-child(1) {
+    margin-bottom: 1em;
+}
+
+.navigacija a:hover,
+.navigacija a:focus {
+    color: rgb(0, 0, 0);
     transition: .1s;
 }
 
@@ -171,8 +177,8 @@ Media queries
     }
 
     .navigacija.open {
-        clip-path: circle(460px);
-        -webkit-clip-path: circle(460px);
+        clip-path: circle(600px);
+        -webkit-clip-path: circle(600px);
         pointer-events: all;
     }
 
@@ -186,6 +192,10 @@ Media queries
 
     .sadrzaj-stranice {
         width: 100%;
+    }
+
+    .hamburger {
+        visibility: visible;
     }
 }
 
