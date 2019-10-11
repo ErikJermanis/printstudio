@@ -169,7 +169,7 @@ Ostalo
 }
 
 .ostalo h3, .ostalo p {
-    font-size: 1.2rem;
+    font-size: 1.1rem;
 }
 
 .ostalo-frame {
@@ -229,7 +229,7 @@ Media queries
         flex-direction: column;
         align-items: center;
     }
-    
+
     .mapouter {
         width: 100%;
     }
