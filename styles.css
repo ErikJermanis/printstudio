@@ -6,6 +6,10 @@
     font-family: 'Open Sans', sans-serif;
 }
 
+/*===========================================================================================================
+Main store
+===========================================================================================================*/
+
 .store-wrapper {
     width: 95%;
     max-width: 1150px;
@@ -40,4 +44,55 @@ header nav a {
     text-decoration: none;
     padding: 9px;
     margin-right: 10vw;
+}
+
+/*===========================================================================================================
+O nama
+===========================================================================================================*/
+
+.store-item {
+    margin-bottom: 2em;
+}
+
+.store-item h2 {
+    font-size: 1.6rem;
+    margin-bottom: .5em;
+}
+
+iframe {
+    width: 50%;
+    height: 350px;
+    margin-right: 1em;
+}
+
+.store-flex {
+    display: flex;
+}
+
+.store-flex-vertical {
+    display: flex;
+    flex-direction: column;
+    padding-top: 1em;
+}
+
+.store-flex-vertical p {
+    margin-bottom: 1em;
+}
+
+.store-flex-vertical p:nth-child(2) {
+    margin-bottom: 2em;
+}
+
+/*===========================================================================================================
+Media queries
+===========================================================================================================*/
+
+@media screen and (max-width: 768px) {
+    .store-flex {
+        flex-direction: column;
+    }
+    
+    iframe {
+        width: 100%;
+    }
 }
