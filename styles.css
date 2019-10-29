@@ -7,7 +7,7 @@
 }
 
 /*===========================================================================================================
-Main store
+Navigacija
 ===========================================================================================================*/
 
 header {
@@ -29,6 +29,19 @@ header h1 {
 
 header h1::first-letter {
     color: rgb(255, 235, 58);
+}
+
+.hamburger {
+    margin-top: 10px;
+    margin-right: 10vw;
+    visibility: hidden;
+}
+
+.line {
+    width: 30px;
+    height: 3px;
+    background: white;
+    margin-bottom: 6px;
 }
 
 header ul {
@@ -107,8 +120,30 @@ Media queries
         margin-right: 0;
     }
 
+    nav {
+        position: absolute;
+        right: 0px;
+        top: 100px;
+        background: rgb(83, 95, 94);
+        clip-path: circle(0px);
+        -webkit-clip-path: circle(0px);
+        transition: all .3s ease-out;
+        pointer-events: none;
+    }
+
+    nav.open {
+        clip-path: circle(97px);
+        -webkit-clip-path: circle(97px);
+        pointer-events: all;
+    }
+
+    .hamburger {
+        visibility: visible;
+    }
+
     header ul {
         flex-direction: column;
+        margin-left: 30px;
     }
     header ul li {
         margin-right: 0;
