@@ -6,6 +6,10 @@
     font-family: 'Open Sans', sans-serif;
 }
 
+body {
+    min-height: 100%;
+}
+
 /*===========================================================================================================
 Navigacija
 ===========================================================================================================*/
@@ -14,6 +18,7 @@ header {
     display: flex;
     justify-content: space-between;
     background: rgb(83, 95, 94);
+    height: 42px;
 }
 
 header a, header h1 {
@@ -64,9 +69,24 @@ Main store
 
 .store-wrapper {
     width: 95%;
+    min-height: calc(100vh - 122px);
     max-width: 1150px;
     margin: 0 auto;
     margin-top: 20px;
+}
+
+footer {
+    background: rgb(83, 95, 94);
+    color: white;
+    height: 60px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.copyright {
+    font-size: .8rem;
+    text-align: center;
 }
 
 /*===========================================================================================================
@@ -120,7 +140,7 @@ Media queries
         margin-right: 0;
     }
 
-    nav {
+    .clip-box {
         position: absolute;
         right: 0px;
         top: 100px;
@@ -131,7 +151,7 @@ Media queries
         pointer-events: none;
     }
 
-    nav.open {
+    .clip-box.open {
         clip-path: circle(97px);
         -webkit-clip-path: circle(97px);
         pointer-events: all;
@@ -141,11 +161,11 @@ Media queries
         visibility: visible;
     }
 
-    header ul {
+    .clip-box ul {
         flex-direction: column;
         margin-left: 30px;
     }
-    header ul li {
+    .clip-box ul li {
         margin-right: 0;
         margin-bottom: 8px;
     }
