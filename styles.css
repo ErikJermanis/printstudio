@@ -36,6 +36,17 @@ header h1::first-letter {
     color: rgb(255, 235, 58);
 }
 
+.toggler {
+    position: absolute;
+    top: 65px;
+    right: 10vw;
+    z-index: 2;
+    width: 35px;
+    height: 35px;
+    opacity: 0;
+    visibility: hidden;
+}
+
 .hamburger {
     margin-top: 10px;
     margin-right: 10vw;
@@ -43,10 +54,34 @@ header h1::first-letter {
 }
 
 .line {
+    position: relative;
     width: 30px;
     height: 3px;
     background: white;
-    margin-bottom: 6px;
+    margin-top: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all .3s ease;
+}
+
+.line::before, 
+.line::after {
+    content: "";
+    position: absolute;
+    z-index: 5;
+    top: -10px;
+    width: 30px;
+    height: 3px;
+    background: inherit;
+}
+
+.line::after {
+    top: 10px;
+}
+
+.line.opena {
+    transform: rotate(180deg);
 }
 
 header ul {
@@ -138,6 +173,10 @@ Media queries
     iframe {
         width: 100%;
         margin-right: 0;
+    }
+
+    .toggler {
+        visibility: visible;
     }
 
     .clip-box {
