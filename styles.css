@@ -38,8 +38,8 @@ header h1::first-letter {
 
 .toggler {
     position: absolute;
-    top: 65px;
-    right: 10vw;
+    top: 6px;
+    right: calc(10vw - 3px);
     z-index: 2;
     width: 35px;
     height: 35px;
@@ -182,7 +182,7 @@ Media queries
     .clip-box {
         position: absolute;
         right: 0px;
-        top: 100px;
+        top: 42px;
         background: rgb(83, 95, 94);
         clip-path: circle(0px);
         -webkit-clip-path: circle(0px);
