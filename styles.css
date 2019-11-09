@@ -108,10 +108,10 @@ Main store
 
 .store-wrapper {
     width: 95%;
-    min-height: calc(100vh - 80px);
+    min-height: calc(100vh - 110px);
     max-width: 1150px;
     margin: 0 auto;
-    margin-top: 20px;
+    margin-top: 50px;
 }
 
 footer {
