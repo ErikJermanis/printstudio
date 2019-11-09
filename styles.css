@@ -102,16 +102,21 @@ header ul li a {
     padding: 8px;
 }
 
+header ul li a:hover {
+    color: rgb(255, 235, 58);
+    transition: .1s;
+}
+
 /*===========================================================================================================
 Main store
 ===========================================================================================================*/
 
 .store-wrapper {
     width: 95%;
-    min-height: calc(100vh - 110px);
     max-width: 1150px;
     margin: 0 auto;
     margin-top: 50px;
+    font-size: .95rem;
 }
 
 footer {
@@ -126,6 +131,27 @@ footer {
 .copyright {
     font-size: .8rem;
     text-align: center;
+}
+
+.legal {
+    display: flex;
+    list-style: none;
+    margin: 0 auto;
+}
+
+.legal li {
+    margin: 0 20px;
+}
+
+.legal li a {
+    text-decoration: none;
+    color: rgb(163, 226, 255);
+    font-size: .8rem;
+}
+
+.legal li a:hover {
+    text-decoration: underline;
+    color: rgb(138, 192, 218);
 }
 
 /*===========================================================================================================
@@ -211,5 +237,17 @@ Media queries
     .clip-box ul li {
         margin-right: 0;
         margin-bottom: 8px;
+    }
+
+    footer {
+        height: 110px;
+    }
+
+    .legal {
+        flex-direction: column;
+    }
+
+    .legal li {
+        text-align: center;
     }
 }
