@@ -67,7 +67,7 @@ button:hover {
 footer {
     background: rgb(83, 95, 94);
     color: white;
-    height: 60px;
+    height: 80px;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -99,13 +99,26 @@ footer {
     color: rgb(138, 192, 218);
 }
 
+.shareonfb {
+    background: #3b5998;
+    text-decoration: none;
+    color: white;
+    font-size: .8rem;
+    width: 134px;
+    text-align: center;
+    margin: 0 auto;
+    margin-top: 8px;
+    border-radius: 4px;
+}
+
 @media screen and (max-width: 768px) {
     footer {
-        height: 110px;
+        height: 140px;
     }
 
     .legal {
         flex-direction: column;
+        padding: 0;
     }
 
     .legal li {
