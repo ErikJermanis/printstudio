@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="icon" href="./icon.png" />
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./dizajner.css">
+    <title>Dizajniraj narudžbu</title>
+</head>
+
+<body>
+    <header>
+        <a href="./index.html"><h1>Printish</h1></a>
+        <nav class="clip-box">
+            <ul>
+                <li><a href="./index.html">Povratak</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="store-wrapper">
+
+        <h1>Dizajnirajte proizvod po želji te nam pošaljite svoju ideju</h1>
+
+        <div class="odabir">
+            <p>Proizvod:</p>
+            <select id="proizvodInput" name="proizvod" onchange="displayBg()">
+                <option value="majica">Majica</option>
+                <option value="upaljac">Upaljac</option>
+            </select>
+        </div>
+
+        <div class="odabir">
+            <p>Print: </p>
+            <select name="print">
+                <option value="slika">Slika</option>
+                <option value="tekst">Tekst</option>
+            </select>
+        </div>
+
+        <input type="file" accept="image/*" name="bgImg" id="bgInput" onchange="ucitaj()" style="display: none;">
+        <label for="bgInput" class="uploadBtn">Prenesi</label>
+
+        <div class="canvas">
+            <img id="canvasBg" src="./tshirt.jpg" width="358px">
+            <img id="canvasFg" src="">
+        </div>
+
+        <p>Veličina:</p>
+        <input class="slider" id="velicinaSlike" type="range" name="velicinaSlike" min="10" max="300" oninput="scale()">
+
+        <p>Rotacija:</p>
+        <input class="slider" type="range" name="rotacijaSlike" min="0" max="360" value="0">
+
+        <p>Položaj X:</p>
+        <input class="slider" type="range" name="polozajX" min="0" max="280">
+
+        <p>Položaj Y:</p>
+        <input class="slider" type="range" name="polozajY" min="0" max="280">
+
+    </div>
+
+    <footer>
+        <div class="copyright">© Printish.</div>
+        <ul class="legal">
+            <li><a href="./dostava.html">Dostava i informacije o plaćanju</a></li>
+            <li><a href="./pravila.html">Pravila povrata i zamjene</a></li>
+            <li><a href="./uvjeti.html">Uvjeti i Odredbe</a></li>
+            <li><a href="./privatnost.html">Pravila o privatnosti</a></li>
+        </ul>
+        <a class="shareonfb" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fprintish.eu%2F&amp;src=sdkpreparse">Podjeli na facebooku</a>
+        <div id="fb-root"></div>
+    </footer>
+
+    <script src="./designer.js"></script>
+</body>

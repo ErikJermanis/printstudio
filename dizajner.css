@@ -36,54 +36,6 @@ header h1::first-letter {
     color: rgb(255, 235, 58);
 }
 
-.toggler {
-    position: absolute;
-    top: 6px;
-    right: calc(10vw - 6px);
-    z-index: 2;
-    width: 40px;
-    height: 35px;
-    opacity: 0;
-    visibility: hidden;
-}
-
-.hamburger {
-    margin-top: 10px;
-    margin-right: 10vw;
-    visibility: hidden;
-}
-
-.line {
-    position: relative;
-    width: 30px;
-    height: 3px;
-    background: white;
-    margin-top: 10px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    transition: all .3s ease;
-}
-
-.line::before, 
-.line::after {
-    content: "";
-    position: absolute;
-    z-index: 5;
-    top: -10px;
-    width: 30px;
-    height: 3px;
-    background: inherit;
-}
-
-.line::after {
-    top: 10px;
-}
-
-.line.opena {
-    transform: rotate(180deg);
-}
-
 header ul {
     list-style: none;
     display: flex;
@@ -104,17 +56,8 @@ header ul li a:hover {
 }
 
 /*===========================================================================================================
-Main store
+Footer
 ===========================================================================================================*/
-
-.store-wrapper {
-    width: 95%;
-    max-width: 1150px;
-    margin: 0 auto;
-    margin-top: 50px;
-    font-size: .95rem;
-    min-height: calc(100vh - 130px);
-}
 
 footer {
     background: rgb(83, 95, 94);
@@ -164,40 +107,72 @@ footer {
 }
 
 /*===========================================================================================================
-O nama
+Main content
 ===========================================================================================================*/
 
-.store-item {
-    margin-bottom: 2em;
+.store-wrapper {
+    width: 95%;
+    max-width: 1150px;
+    margin: 0 auto;
+    margin-top: 50px;
+    font-size: .95rem;
+    min-height: calc(100vh - 130px);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
-.store-item h2 {
-    font-size: 1.6rem;
-    margin-bottom: .5em;
+h1 {
+    margin-top: .5em;
+    font-size: 1.2rem;
 }
 
-iframe {
-    width: 50%;
-    height: 350px;
+.odabir {
+    display: flex;
+    margin-top: 1em;
+}
+
+.odabir p {
     margin-right: 1em;
 }
 
-.store-flex {
-    display: flex;
+.uploadBtn {
+    margin-top: 1em;
+    color: rgb(83, 95, 94);
+    border: 1px solid rgb(83, 95, 94);
+    border-radius: 5px;
+    padding: 0 8px;
 }
 
-.store-flex-vertical {
-    display: flex;
-    flex-direction: column;
-    padding-top: 1em;
+.uploadBtn:hover {
+    color: white;
+    background: rgb(83, 95, 94);
 }
 
-.store-flex-vertical p {
-    margin-bottom: 1em;
+.canvas {
+    margin-top: 1em;
+    width: 360px;
+    height: 360px;
+    border: 1px solid black;
 }
 
-.store-flex-vertical p:nth-child(2) {
-    margin-bottom: 2em;
+#canvasFg {
+    position: relative;
+    z-index: -1;
+}
+
+#canvasBg {
+    position: relative;
+    z-index: -2;
+}
+
+.slider {
+    margin-top: 1em;
+    width: 290px;
+}
+
+p {
+    margin-top: 1em;
 }
 
 /*===========================================================================================================
@@ -205,44 +180,11 @@ Media queries
 ===========================================================================================================*/
 
 @media screen and (max-width: 768px) {
-    .store-flex {
-        flex-direction: column;
-    }
-    
-    iframe {
-        width: 100%;
-        margin-right: 0;
-    }
-
-    .toggler {
-        visibility: visible;
-    }
-
-    .clip-box {
-        position: absolute;
-        right: -12px;
-        top: 42px;
-        background: rgb(83, 95, 94);
-        clip-path: circle(0px);
-        -webkit-clip-path: circle(0px);
-        transition: all .3s ease-out;
-        pointer-events: none;
-    }
-
-    .clip-box.open {
-        clip-path: circle(130px);
-        -webkit-clip-path: circle(130px);
-        pointer-events: all;
-    }
-
-    .hamburger {
-        visibility: visible;
-    }
-
     .clip-box ul {
         flex-direction: column;
         margin-left: 30px;
     }
+
     .clip-box ul li {
         margin-right: 0;
         margin-bottom: 8px;
