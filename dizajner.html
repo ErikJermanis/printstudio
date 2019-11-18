@@ -45,14 +45,14 @@
 
         <div class="canvas">
             <img id="canvasBg" src="./tshirt.jpg" width="358px">
-            <img id="canvasFg" src="">
+            <img class="dragme" id="canvasFg" src="">
         </div>
 
         <p>Veličina:</p>
         <input class="slider" id="velicinaSlike" type="range" name="velicinaSlike" min="10" max="300" oninput="scale()">
 
         <p>Rotacija:</p>
-        <input class="slider" type="range" name="rotacijaSlike" min="0" max="360" value="0">
+        <input class="slider rotiranaSlika" id="rotacijaSlike" type="range" name="rotacijaSlike" min="0" max="360" value="0" oninput="rotate()">
 
         <p>Položaj X:</p>
         <input class="slider" type="range" name="polozajX" min="0" max="280">

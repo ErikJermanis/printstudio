@@ -158,8 +158,11 @@ h1 {
 
 #canvasFg {
     position: relative;
-    z-index: -1;
+    top: -360px;
+    /*z-index: -1;*/
 }
+
+
 
 #canvasBg {
     position: relative;
