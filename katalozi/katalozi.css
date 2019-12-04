@@ -1,0 +1,109 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-size: 16px;
+    box-sizing: border-box;
+    font-family: 'Open Sans', sans-serif;
+}
+
+/*===========================================================================================================
+Navigacija
+===========================================================================================================*/
+
+header {
+    display: flex;
+    justify-content: space-between;
+    background: rgb(83, 95, 94);
+    height: 42px;
+    position: fixed;
+    z-index: 2;
+    top: 0;
+    width: 100vw;
+}
+
+header a, header h1 {
+    color: white;
+    margin: auto 0;
+    text-decoration: none;
+}
+
+header h1 {
+    margin-left: 10vw;
+    font-size: 2rem;
+}
+
+header h1::first-letter {
+    color: rgb(255, 235, 58);
+}
+
+header ul {
+    list-style: none;
+    display: flex;
+    margin-top: 8px;
+    margin-right: 9vw;
+}
+
+header ul li {
+    margin-right: 2em;
+}
+
+header ul li a {
+    padding: 8px;
+}
+
+header ul li a:hover {
+    color: rgb(255, 235, 58);
+    transition: .1s;
+}
+
+/*===========================================================================================================
+Footer
+===========================================================================================================*/
+
+footer {
+    background: rgb(83, 95, 94);
+    color: white;
+    height: 80px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-top: 500px;
+}
+
+.copyright {
+    font-size: .8rem;
+    text-align: center;
+}
+
+.legal {
+    display: flex;
+    list-style: none;
+    margin: 0 auto;
+}
+
+.legal li {
+    margin: 0 20px;
+}
+
+.legal li a {
+    text-decoration: none;
+    color: rgb(163, 226, 255);
+    font-size: .8rem;
+}
+
+.legal li a:hover {
+    text-decoration: underline;
+    color: rgb(138, 192, 218);
+}
+
+.shareonfb {
+    background: #3b5998;
+    text-decoration: none;
+    color: white;
+    font-size: .8rem;
+    width: 134px;
+    text-align: center;
+    margin: 0 auto;
+    margin-top: 8px;
+    border-radius: 4px;
+}
