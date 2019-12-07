@@ -57,6 +57,53 @@ header ul li a:hover {
 }
 
 /*===========================================================================================================
+Stranica
+===========================================================================================================*/
+
+.kataloziWrapper {
+    width: 95%;
+    max-width: 1150px;
+    margin: auto;
+    margin-top: 42px;
+    min-height: calc(100vh - 130px);
+}
+
+.kataloziH1 {
+    margin-top: 50px;
+    font-size: 2rem;
+    font-weight: 700;
+}
+
+.kataloziH2 {
+    font-size: 1rem;
+    font-weight: 400;
+}
+
+.ikoneKataloga {
+    margin-top: 5em;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+
+.ikoneKataloga a {
+    text-decoration: none;
+    color: black;
+}
+
+.ikonaK {
+    margin: 0 3em;
+    width: 160px;
+    margin-bottom: 2.5em;
+}
+
+.ikonaKimg {
+    width: 160px;
+    border: 1px solid rgb(83, 95, 94);
+    border-radius: 6px;
+}
+
+/*===========================================================================================================
 Footer
 ===========================================================================================================*/
 
@@ -67,7 +114,6 @@ footer {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    margin-top: 500px;
 }
 
 .copyright {
@@ -106,4 +152,22 @@ footer {
     margin: 0 auto;
     margin-top: 8px;
     border-radius: 4px;
+}
+
+@media screen and (max-width: 768px) {
+    .kataloziWrapper {
+        min-height: calc(100vh - 190px);
+    }
+
+    footer {
+        height: 140px;
+    }
+
+    .legal {
+        flex-direction: column;
+    }
+
+    .legal li {
+        text-align: center;
+    }
 }
