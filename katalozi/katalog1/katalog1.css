@@ -23,9 +23,9 @@ body {
 .page {
     position: absolute;
     margin-top: 10px;
-    width: 77vh;
+    width: 79vh;
     height: 95vh;
-    margin-left: 102vh;
+    margin-left: calc((100vw - 158vh) / 2 + 79vh);
     transition: .3s;
     transform-origin: left;
     transform-style: preserve-3d;
@@ -37,7 +37,7 @@ body {
 
 .pageFront, .pageBack {
     position: absolute;
-    width: 77vh;
+    width: 79vh;
     height: 95vh;
     background-size: cover;
 }
@@ -140,3 +140,14 @@ body {
 #pg46 {background: url('s46.jpg');background-size: cover;}
 #pg47 {background: url('s47.jpg');background-size: cover;}
 #pg48 {background: url('s48.jpg');background-size: cover;}
+
+@media screen and (max-aspect-ratio: 16/10) {
+    body {
+        background: red;
+    }
+
+    .page, .pageFront, .pageBack {
+        width: 49vw;
+        height: 59vw;
+    }
+}
