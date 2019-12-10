@@ -4,8 +4,9 @@
     box-sizing: border-box;
 }
 
-body {
-    background: #1b1b1b;
+.bodyClass {
+    background: url('./katalogBG.jpg');
+    background-size: cover;
     width: 100vw;
     height: 100vh;
     overflow: hidden;
@@ -56,9 +57,11 @@ body {
     top: 50vh;
     font-size: 30px;
     border-radius: 40px;
-    border: none;
+    border: 1px solid white;
+    background: rgb(43, 43, 43);
     width: 50px;
     height: 50px;
+    color: white;
 }
 
 .btnFwd {
@@ -69,18 +72,43 @@ body {
     left: 10px;
 }
 
+.btnFwd:hover, .btnBwd:hover, .btnZoom:hover {
+    background: rgb(38, 70, 119);
+}
+
 .Xgumb {
-    position: absolute;
+    position: fixed;
     top: 10px;
-    left: 10px;
+    right: 10px;
 }
 
 .Xgumb button {
-    width: 30px;
-    height: 30px;
     font-size: 1rem;
     border-radius: 4px;
-    border: none;
+    border: 1px solid white;
+    padding: .3rem .4rem;
+    background: rgb(43, 43, 43);
+    color: white;
+}
+
+.Xgumb button:hover{
+    background: rgb(255, 37, 37);
+}
+
+.btnZoom {
+    position: fixed;
+    top: 10px;
+    left: 10px;
+    font-size: 1rem;
+    border-radius: 4px;
+    border: 1px solid white;
+    padding: .3rem .4rem;
+    background: rgb(43, 43, 43);
+    color: white;
+}
+
+.btnZoom:focus, .btnFwd:focus, .btnBwd:focus, .Xgumb.focus {
+    outline: none;
 }
 
 #page2, #page3, #page4, #page5, #page6, #page7, #page8, #page9, #page10,
@@ -142,10 +170,6 @@ body {
 #pg48 {background: url('s48.jpg');background-size: cover;}
 
 @media screen and (max-aspect-ratio: 16/10) {
-    body {
-        background: red;
-    }
-
     .page, .pageFront, .pageBack {
         width: 49vw;
         height: 59vw;
