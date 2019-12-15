@@ -175,3 +175,28 @@
         height: 59vw;
     }
 }
+
+@media screen and (max-width: 768px) {
+    .bodyClass {
+        overflow: visible;
+    }
+
+    .magazine, .page, .pageFront, .pageBack {
+        position: unset;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .page, .pageFront, .pageBack {
+        width: 98vw;
+    }
+
+    .page, .pageFront, .pageBack {
+        height: 236vw;
+        margin: .06em 1vw;
+    }
+
+    .pageBack {
+        transform: none;
+    }
+}

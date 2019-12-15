@@ -46,23 +46,30 @@ const toggleZoom = () => {
 
         zoom = 0;
     } else {
+        console.log(window.innerWidth);
         document.querySelector(".bodyClass").style.overflow = 'hidden';
 
         document.querySelectorAll('.page').forEach(single => {
             single.style.marginTop = '10px',
             single.style.marginLeft = 'calc((100vw - 158vh) / 2 + 79vh)',
-            single.style.width = '79vh',
-            single.style.height = '95vh'
+            window.innerWidth / window.innerHeight > 1.6 ? single.style.width = '79vh' : single.style.width = '49vw';
+            window.innerWidth / window.innerHeight > 1.6 ? single.style.height = '95vh' : single.style.height = '59vw';
+            /*single.style.width = '79vh',
+            single.style.height = '95vh'*/
         });
 
         document.querySelectorAll('.pageFront').forEach(single => {
-            single.style.width = '79vh',
-            single.style.height = '95vh'
+            window.innerWidth / window.innerHeight > 1.6 ? single.style.width = '79vh' : single.style.width = '49vw';
+            window.innerWidth / window.innerHeight > 1.6 ? single.style.height = '95vh' : single.style.height = '59vw';
+            /*single.style.width = '79vh',
+            single.style.height = '95vh'*/
         });
 
         document.querySelectorAll('.pageBack').forEach(single => {
-            single.style.width = '75vh',
-            single.style.height = '95vh'
+            window.innerWidth / window.innerHeight > 1.6 ? single.style.width = '79vh' : single.style.width = '49vw';
+            window.innerWidth / window.innerHeight > 1.6 ? single.style.height = '95vh' : single.style.height = '59vw';
+            /*single.style.width = '79vh',
+            single.style.height = '95vh'*/
         });
 
         document.querySelector('.btnZoom').innerHTML = "Zumiraj";
@@ -70,39 +77,3 @@ const toggleZoom = () => {
         zoom = 1;
     }
 };
-
-/*const magnify = (zoom) => {
-    let img, glass, w, h, bw;
-    img = document.getElementById('pg1');
-    
-    glass = document.createElement("DIV");
-    glass.setAttribute("class", "img-magnifier-glass");
-    img.parentElement.insertBefore(glass, img);
-
-    glass.style.backgroundImage = "url('s1.jpg')";
-    glass.style.width = '158vh'
-    glass.style.height = '190vh';
-    glass.style.backgroundRepeat = 'no-repeat';
-    bw = 3;
-    w = glass.offsetWidth / 2;
-    h = glass.offsetHeight / 2;
-
-    console.log(300 < '200vw');
-
-    glass.addEventListener("mousemove", moveMagnifier);
-    img.addEventListener("mousemove", moveMagnifier);
-
-    const moveMagnifier = (e) => {
-        let pos, x, y;
-
-        e.preventDefault();
-
-        pos.getCursorPos(e);
-        x = pos.x;
-        y = pos.y;
-
-        if (x > img.width - (w / zoom)) {x = img.width - (w / zoom)};
-    };
-};
-
-magnify(2);*/
