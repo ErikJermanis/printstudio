@@ -177,6 +177,11 @@
 }
 
 @media screen and (max-width: 768px) {
+
+    .btnFwd, .btnBwd, .btnZoom {
+        display: none;
+    }
+
     .bodyClass {
         overflow: visible;
     }
