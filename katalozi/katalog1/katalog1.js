@@ -46,7 +46,6 @@ const toggleZoom = () => {
 
         zoom = 0;
     } else {
-        console.log(window.innerWidth);
         document.querySelector(".bodyClass").style.overflow = 'hidden';
 
         document.querySelectorAll('.page').forEach(single => {
@@ -77,3 +76,35 @@ const toggleZoom = () => {
         zoom = 1;
     }
 };
+
+const bodyObj = document.querySelector('.bodyClass')
+let isDown = false;
+let startX;
+let startY;
+let scrollX;
+let scrollY;
+
+bodyObj.addEventListener('mousedown', (e) => {
+    e.preventDefault();
+    isDown = true;
+    startX = e.pageX;
+    startY = e.pageY;
+    scrollX = window.scrollX;
+    scrollY = window.scrollY;
+});
+
+bodyObj.addEventListener('mouseleave', () => {});
+
+bodyObj.addEventListener('mouseup', () => {
+    isDown = false;
+});
+
+bodyObj.addEventListener('mousemove', (e) => {
+    if (!isDown) return;
+    e.preventDefault();
+    const x = e.pageX;
+    const y = e.pageY;
+    const walkX = x - startX;
+    const walkY = y - startY;
+    window.scroll(scrollX - walkX, scrollY - walkY);
+});

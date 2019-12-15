@@ -183,7 +183,7 @@
     }
 
     .bodyClass {
-        overflow: visible;
+        overflow: scroll;
     }
 
     .magazine, .page, .pageFront, .pageBack {
