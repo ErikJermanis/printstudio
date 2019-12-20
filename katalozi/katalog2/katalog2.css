@@ -1,0 +1,223 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Open Sans', sans-serif;
+}
+
+.bodyClass {
+    background: url('./katalogBG.jpg');
+    background-size: cover;
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.wrapper {
+    width: 100%;
+    height: 100%;
+}
+
+.magazine {
+    perspective: 2000px;
+}
+
+.page {
+    position: absolute;
+    margin-top: 10px;
+    width: 79vh;
+    height: 95vh;
+    margin-left: calc((100vw - 158vh) / 2 + 79vh);
+    transition: .3s;
+    transform-origin: left;
+    transform-style: preserve-3d;
+}
+
+.fliped {
+    transform: rotateY(-180deg);
+}
+
+.pageFront, .pageBack {
+    position: absolute;
+    width: 79vh;
+    height: 95vh;
+    background-size: cover;
+}
+
+.pageFront {
+    box-shadow: inset 12px 0px 18px 0px rgba(0, 0, 0, 0.22);
+}
+
+.pageBack {
+    transform: rotateY(180deg);
+    box-shadow: inset -12px 0px 18px 0px rgba(0, 0, 0, 0.22);
+}
+
+.btnFwd, .btnBwd {
+    position: fixed;
+    top: 50vh;
+    font-size: 30px;
+    border-radius: 40px;
+    border: 1px solid white;
+    background: rgb(43, 43, 43);
+    width: 50px;
+    height: 50px;
+    color: white;
+}
+
+.btnFwd {
+    right: 10px;
+}
+
+.btnBwd {
+    left: 10px;
+}
+
+.btnFwd:hover, .btnBwd:hover, .btnZoom:hover {
+    background: rgb(38, 70, 119);
+}
+
+.Xgumb {
+    position: fixed;
+    top: 10px;
+    right: 10px;
+}
+
+.Xgumb button {
+    font-size: 1rem;
+    border-radius: 4px;
+    border: 1px solid white;
+    padding: .3rem .4rem;
+    background: rgb(43, 43, 43);
+    color: white;
+}
+
+.Xgumb button:hover{
+    background: rgb(255, 37, 37);
+}
+
+.btnZoom {
+    position: fixed;
+    top: 10px;
+    left: 10px;
+    font-size: 1rem;
+    border-radius: 4px;
+    border: 1px solid white;
+    padding: .3rem .4rem;
+    background: rgb(43, 43, 43);
+    color: white;
+}
+
+.btnZoom:focus, .btnFwd:focus, .btnBwd:focus, .Xgumb.focus {
+    outline: none;
+}
+
+.poruka {
+    position: fixed;
+    top: 50px;
+    margin: 0 auto;
+    color: white;
+    background: rgb(43, 43, 43);
+    padding: .7em 1em;
+    border-radius: 6px;
+    text-align: center;
+    width: 300px;
+    margin-left: calc((100vw - 300px) / 2);
+    visibility: hidden;
+}
+
+#page2, #page3, #page4, #page5, #page6, #page7, #page8, #page9, #page10,
+#page11, #page12, #page13, #page14, #page15, #page16, #page17, #page18, #page19,
+#page20, #page21, #page22, #page23, #page24, #page25, #page26, #page27, #page28,
+#page29, #page30, #page31, #page32, #page33, #page34, #page35, #page36, #page37,
+#page38, #page39, #page40, #page41, #page42, #page43, #page44, #page45, #page46,
+#page47, #page48 {
+    z-index: -1;
+}
+
+#pg1 {background: url('0001.jpg');background-size: cover;}
+#pg2 {background: url('0002.jpg');background-size: cover;}
+#pg3 {background: url('0003.jpg');background-size: cover;}
+#pg4 {background: url('0004.jpg');background-size: cover;}
+#pg5 {background: url('0005.jpg');background-size: cover;}
+#pg6 {background: url('0006.jpg');background-size: cover;}
+#pg7 {background: url('0007.jpg');background-size: cover;}
+#pg8 {background: url('0008.jpg');background-size: cover;}
+#pg9 {background: url('0009.jpg');background-size: cover;}
+#pg10 {background: url('0010.jpg');background-size: cover;}
+#pg11 {background: url('0011.jpg');background-size: cover;}
+#pg12 {background: url('0012.jpg');background-size: cover;}
+#pg13 {background: url('0013.jpg');background-size: cover;}
+#pg14 {background: url('0014.jpg');background-size: cover;}
+#pg15 {background: url('0015.jpg');background-size: cover;}
+#pg16 {background: url('0016.jpg');background-size: cover;}
+#pg17 {background: url('0017.jpg');background-size: cover;}
+#pg18 {background: url('0018.jpg');background-size: cover;}
+#pg19 {background: url('0019.jpg');background-size: cover;}
+#pg20 {background: url('0020.jpg');background-size: cover;}
+#pg21 {background: url('0021.jpg');background-size: cover;}
+#pg22 {background: url('0022.jpg');background-size: cover;}
+#pg23 {background: url('0023.jpg');background-size: cover;}
+#pg24 {background: url('0024.jpg');background-size: cover;}
+#pg25 {background: url('0025.jpg');background-size: cover;}
+#pg26 {background: url('0026.jpg');background-size: cover;}
+#pg27 {background: url('0027.jpg');background-size: cover;}
+#pg28 {background: url('0028.jpg');background-size: cover;}
+#pg29 {background: url('0029.jpg');background-size: cover;}
+#pg30 {background: url('0030.jpg');background-size: cover;}
+#pg31 {background: url('0031.jpg');background-size: cover;}
+#pg32 {background: url('0032.jpg');background-size: cover;}
+#pg33 {background: url('0033.jpg');background-size: cover;}
+#pg34 {background: url('0034.jpg');background-size: cover;}
+#pg35 {background: url('0035.jpg');background-size: cover;}
+#pg36 {background: url('0036.jpg');background-size: cover;}
+#pg37 {background: url('0037.jpg');background-size: cover;}
+#pg38 {background: url('0038.jpg');background-size: cover;}
+#pg39 {background: url('0039.jpg');background-size: cover;}
+#pg40 {background: url('0040.jpg');background-size: cover;}
+#pg41 {background: url('0041.jpg');background-size: cover;}
+#pg42 {background: url('0042.jpg');background-size: cover;}
+#pg43 {background: url('0043.jpg');background-size: cover;}
+#pg44 {background: url('0044.jpg');background-size: cover;}
+#pg45 {background: url('0045.jpg');background-size: cover;}
+#pg46 {background: url('0046.jpg');background-size: cover;}
+#pg47 {background: url('0047.jpg');background-size: cover;}
+#pg48 {background: url('0048.jpg');background-size: cover;}
+
+@media screen and (max-aspect-ratio: 16/10) {
+    .page, .pageFront, .pageBack {
+        width: 49vw;
+        height: 59vw;
+    }
+}
+
+@media screen and (max-width: 768px) {
+
+    .btnFwd, .btnBwd, .btnZoom {
+        display: none;
+    }
+
+    .bodyClass {
+        overflow: scroll;
+    }
+
+    .magazine, .page, .pageFront, .pageBack {
+        position: unset;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .page, .pageFront, .pageBack {
+        width: 98vw;
+    }
+
+    .page, .pageFront, .pageBack {
+        height: 236vw;
+        margin: .06em 1vw;
+    }
+
+    .pageBack {
+        transform: none;
+    }
+}
