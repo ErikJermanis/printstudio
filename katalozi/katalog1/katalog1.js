@@ -24,6 +24,8 @@ const turnBwd = () => {
 const toggleZoom = () => {
     if (zoom) {
 
+        document.querySelector('.poruka').style.visibility = 'visible';
+
         // Click and drag engine
         const mag = document.querySelector('.wrapper');
         mag.style.overflow = 'scroll';
@@ -35,6 +37,7 @@ const toggleZoom = () => {
         let isDown;
 
         mag.addEventListener('mousedown', (e) => {
+            document.querySelector('.poruka').style.visibility = 'hidden';
             isDown = true;
             startY = e.pageY;
             startX = e.pageX;
