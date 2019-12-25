@@ -20,8 +20,8 @@
 }
 
 .magazine {
-    width: 800px;
-    height: 550px;
+    width: 134.4vh;
+    height: 96vh;
     margin: auto;
     display: flex;
 }
@@ -40,9 +40,9 @@
 .page {
     position: absolute;
     top: 0;
-    width: 400px;
-    height: 550px;
-    right: calc((100vw - 800px) / 2);
+    width: 67.2vh;
+    height: 96vh;
+    right: calc((100vw - 134.4vh) / 2);
     transform-origin: left;
     transform-style: preserve-3d;
 }
@@ -53,8 +53,8 @@
 
 .pageFront, .pageBack {
     position: absolute;
-    width: 400px;
-    height: 550px;
+    width: 67.2vh;
+    height: 96vh;
 }
 
 .pageFrontshadow {
@@ -72,8 +72,8 @@
 .pageB {
     position: absolute;
     top: 0;
-    width: 400px;
-    height: 550px;
+    width: 67.2vh;
+    height: 96vh;
     right: calc((100vw) / 2);
     transform-origin: right;
     transform-style: preserve-3d;
@@ -81,8 +81,8 @@
 
 .pageFrontB, .pageBackB {
     position: absolute;
-    width: 400px;
-    height: 550px;
+    width: 67.2vh;
+    height: 96vh;
 }
 
 .pageBackB {
@@ -181,6 +181,22 @@ Buttons
 /*=========================================================================================================
 Media queries
 =========================================================================================================*/
+
+@media screen and (max-aspect-ratio: 16/10) {
+    .magazine {
+        width: 84vw;
+        height: 60vw;
+    }
+
+    .page, .pageB, .pageFront, .pageBack, .pageFrontB, .pageBackB {
+        width: 42vw;
+        height: 60vw;
+    }
+
+    .page {
+        right: calc((100vw - 84vw) / 2);
+    }
+}
 
 @media screen and (max-width: 768px) {
 

@@ -22,6 +22,7 @@ const pageBack = document.querySelector('.pageBack');
 const pageB = document.querySelector('.pageB');
 const pageFrontB = document.querySelector('.pageFrontB');
 const pageBackB = document.querySelector('.pageBackB');
+const catalogue = document.querySelector('.magazine');
 
 gumbic.style.background = `url(${preload[0]})`;
 gumbic.style.backgroundSize = 'cover';
@@ -116,6 +117,7 @@ const toggleZoom = () => {
         // Click and drag engine
         const mag = document.querySelector('.wrapper');
         mag.style.overflow = 'scroll';
+        
 
         let startY;
         let startX;
@@ -154,22 +156,10 @@ const toggleZoom = () => {
         });
 
         // Resizing stuff
-        document.querySelectorAll('.page').forEach(single => {
-            single.style.marginTop = '0px',
-            single.style.marginLeft = '158vh',
-            single.style.width = '158vh',
-            single.style.height = '190vh'
-        });
-
-        document.querySelectorAll('.pageFront').forEach(single => {
-            single.style.width = '158vh',
-            single.style.height = '190vh'
-        });
-
-        document.querySelectorAll('.pageBack').forEach(single => {
-            single.style.width = '158vh',
-            single.style.height = '190vh'
-        });
+        catalogue.style.width = '268.8vh';
+        catalogue.style.height = '192vh';
+        napred.style.visibility = 'hidden';
+        nazad.style.visibility = 'hidden';
 
         document.querySelector('.btnZoom').innerHTML = "Odzumiraj";
 
@@ -177,23 +167,16 @@ const toggleZoom = () => {
     } else {
         const mag = document.querySelector('.wrapper');
         mag.style.overflow = 'hidden';
+        napred.style.visibility = 'visible';
+        nazad.style.visibility = 'visible';
 
-        document.querySelectorAll('.page').forEach(single => {
-            single.style.marginTop = '10px',
-            single.style.marginLeft = 'calc((100vw - 158vh) / 2 + 79vh)',
-            window.innerWidth / window.innerHeight > 1.6 ? single.style.width = '79vh' : single.style.width = '49vw';
-            window.innerWidth / window.innerHeight > 1.6 ? single.style.height = '95vh' : single.style.height = '59vw';
-        });
-
-        document.querySelectorAll('.pageFront').forEach(single => {
-            window.innerWidth / window.innerHeight > 1.6 ? single.style.width = '79vh' : single.style.width = '49vw';
-            window.innerWidth / window.innerHeight > 1.6 ? single.style.height = '95vh' : single.style.height = '59vw';
-        });
-
-        document.querySelectorAll('.pageBack').forEach(single => {
-            window.innerWidth / window.innerHeight > 1.6 ? single.style.width = '79vh' : single.style.width = '49vw';
-            window.innerWidth / window.innerHeight > 1.6 ? single.style.height = '95vh' : single.style.height = '59vw';
-        });
+        if(window.innerWidth / window.innerHeight > 1.6) {
+            catalogue.style.width = '134.4vh';
+            catalogue.style.height = '96vh';
+        } else {
+            catalogue.style.width = '84vw';
+            catalogue.style.height = '60vw';
+        };
 
         document.querySelector('.btnZoom').innerHTML = "Zumiraj";
 
