@@ -3,6 +3,7 @@
     padding: 0;
     box-sizing: border-box;
     font-family: 'Open Sans', sans-serif;
+    perspective: 2000px;
 }
 
 .bodyClass {
@@ -19,16 +20,29 @@
 }
 
 .magazine {
-    perspective: 2000px;
+    width: 134.4vh;
+    height: 96vh;
+    margin: auto;
+    display: flex;
+}
+
+.page1 {
+    flex: 1;
+    box-shadow: inset -12px 0px 18px 0px rgba(0, 0, 0, 0.22);
+    
+}
+
+.page2 {
+    flex: 1;
+    box-shadow: inset 12px 0px 18px 0px rgba(0, 0, 0, 0.22);
 }
 
 .page {
     position: absolute;
-    margin-top: 10px;
-    width: 79vh;
-    height: 95vh;
-    margin-left: calc((100vw - 158vh) / 2 + 79vh);
-    transition: .3s;
+    top: 0;
+    width: 67.2vh;
+    height: 96vh;
+    right: calc((100vw - 134.4vh) / 2);
     transform-origin: left;
     transform-style: preserve-3d;
 }
@@ -39,19 +53,57 @@
 
 .pageFront, .pageBack {
     position: absolute;
-    width: 79vh;
-    height: 95vh;
-    background-size: cover;
+    width: 67.2vh;
+    height: 96vh;
 }
 
-.pageFront {
+.pageFrontshadow {
     box-shadow: inset 12px 0px 18px 0px rgba(0, 0, 0, 0.22);
+}
+
+.pageBackshadow {
+    box-shadow: inset -12px 0px 18px 0px rgba(0, 0, 0, 0.22);
 }
 
 .pageBack {
     transform: rotateY(180deg);
+}
+
+.pageB {
+    position: absolute;
+    top: 0;
+    width: 67.2vh;
+    height: 96vh;
+    right: calc((100vw) / 2);
+    transform-origin: right;
+    transform-style: preserve-3d;
+}
+
+.pageFrontB, .pageBackB {
+    position: absolute;
+    width: 67.2vh;
+    height: 96vh;
+}
+
+.pageBackB {
+    transform: rotateY(180deg);  
+}
+
+.pageFrontBshadow {
     box-shadow: inset -12px 0px 18px 0px rgba(0, 0, 0, 0.22);
 }
+
+.pageBackBshadow {
+    box-shadow: inset 12px 0px 18px 0px rgba(0, 0, 0, 0.22);
+}
+
+.flipedB {
+    transform: rotateY(180deg);
+}
+
+/*=========================================================================================================
+Buttons
+=========================================================================================================*/
 
 .btnFwd, .btnBwd {
     position: fixed;
@@ -126,68 +178,23 @@
     visibility: hidden;
 }
 
-#page2, #page3, #page4, #page5, #page6, #page7, #page8, #page9, #page10,
-#page11, #page12, #page13, #page14, #page15, #page16, #page17, #page18, #page19,
-#page20, #page21, #page22, #page23, #page24, #page25, #page26, #page27, #page28,
-#page29, #page30, #page31, #page32, #page33, #page34, #page35, #page36, #page37,
-#page38, #page39, #page40, #page41, #page42, #page43, #page44, #page45, #page46,
-#page47, #page48 {
-    z-index: -1;
-}
-
-#pg1 {background: url('s1.jpg');background-size: cover;}
-#pg2 {background: url('s2.jpg');background-size: cover;}
-#pg3 {background: url('s3.jpg');background-size: cover;}
-#pg4 {background: url('s4.jpg');background-size: cover;}
-#pg5 {background: url('s5.jpg');background-size: cover;}
-#pg6 {background: url('s6.jpg');background-size: cover;}
-#pg7 {background: url('s7.jpg');background-size: cover;}
-#pg8 {background: url('s8.jpg');background-size: cover;}
-#pg9 {background: url('s9.jpg');background-size: cover;}
-#pg10 {background: url('s10.jpg');background-size: cover;}
-#pg11 {background: url('s11.jpg');background-size: cover;}
-#pg12 {background: url('s12.jpg');background-size: cover;}
-#pg13 {background: url('s13.jpg');background-size: cover;}
-#pg14 {background: url('s14.jpg');background-size: cover;}
-#pg15 {background: url('s15.jpg');background-size: cover;}
-#pg16 {background: url('s16.jpg');background-size: cover;}
-#pg17 {background: url('s17.jpg');background-size: cover;}
-#pg18 {background: url('s18.jpg');background-size: cover;}
-#pg19 {background: url('s19.jpg');background-size: cover;}
-#pg20 {background: url('s20.jpg');background-size: cover;}
-#pg21 {background: url('s21.jpg');background-size: cover;}
-#pg22 {background: url('s22.jpg');background-size: cover;}
-#pg23 {background: url('s23.jpg');background-size: cover;}
-#pg24 {background: url('s24.jpg');background-size: cover;}
-#pg25 {background: url('s25.jpg');background-size: cover;}
-#pg26 {background: url('s26.jpg');background-size: cover;}
-#pg27 {background: url('s27.jpg');background-size: cover;}
-#pg28 {background: url('s28.jpg');background-size: cover;}
-#pg29 {background: url('s29.jpg');background-size: cover;}
-#pg30 {background: url('s30.jpg');background-size: cover;}
-#pg31 {background: url('s31.jpg');background-size: cover;}
-#pg32 {background: url('s32.jpg');background-size: cover;}
-#pg33 {background: url('s33.jpg');background-size: cover;}
-#pg34 {background: url('s34.jpg');background-size: cover;}
-#pg35 {background: url('s35.jpg');background-size: cover;}
-#pg36 {background: url('s36.jpg');background-size: cover;}
-#pg37 {background: url('s37.jpg');background-size: cover;}
-#pg38 {background: url('s38.jpg');background-size: cover;}
-#pg39 {background: url('s39.jpg');background-size: cover;}
-#pg40 {background: url('s40.jpg');background-size: cover;}
-#pg41 {background: url('s41.jpg');background-size: cover;}
-#pg42 {background: url('s42.jpg');background-size: cover;}
-#pg43 {background: url('s43.jpg');background-size: cover;}
-#pg44 {background: url('s44.jpg');background-size: cover;}
-#pg45 {background: url('s45.jpg');background-size: cover;}
-#pg46 {background: url('s46.jpg');background-size: cover;}
-#pg47 {background: url('s47.jpg');background-size: cover;}
-#pg48 {background: url('s48.jpg');background-size: cover;}
+/*=========================================================================================================
+Media queries
+=========================================================================================================*/
 
 @media screen and (max-aspect-ratio: 16/10) {
-    .page, .pageFront, .pageBack {
-        width: 49vw;
-        height: 59vw;
+    .magazine {
+        width: 84vw;
+        height: 60vw;
+    }
+
+    .page, .pageB, .pageFront, .pageBack, .pageFrontB, .pageBackB {
+        width: 42vw;
+        height: 60vw;
+    }
+
+    .page {
+        right: calc((100vw - 84vw) / 2);
     }
 }
 
@@ -195,29 +202,5 @@
 
     .btnFwd, .btnBwd, .btnZoom {
         display: none;
-    }
-
-    .bodyClass {
-        overflow: scroll;
-    }
-
-    .magazine, .page, .pageFront, .pageBack {
-        position: unset;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .page, .pageFront, .pageBack {
-        width: 98vw;
-    }
-
-    .page, .pageFront, .pageBack {
-        height: 236vw;
-        margin: .06em 1vw;
-    }
-
-    .pageBack {
-        transform: none;
     }
 }
