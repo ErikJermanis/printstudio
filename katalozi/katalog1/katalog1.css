@@ -6,6 +6,14 @@
     perspective: 2000px;
 }
 
+.mobile {
+    visibility: hidden;
+}
+
+.desktop {
+    visibility: visible;
+}
+
 .bodyClass {
     background: url('./katalogBG.jpg');
     background-size: cover;
@@ -202,5 +210,14 @@ Media queries
 
     .btnFwd, .btnBwd, .btnZoom {
         display: none;
+    }
+
+    .mobile {
+        visibility: visible;
+    }
+    
+    .desktop {
+        height: 0px;
+        visibility: hidden;
     }
 }
