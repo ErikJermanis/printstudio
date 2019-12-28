@@ -1,5 +1,6 @@
 * {
     box-sizing: border-box;
+    color: black;
 }
 
 body {
@@ -7,6 +8,7 @@ body {
     padding: 0;
     font-size: 16px;
     font-family: 'Open Sans', sans-serif;
+    background: white;
 }
 
 header {
@@ -92,7 +94,7 @@ button:hover {
 
 footer {
     background: #282165;
-    color: white;
+    
     height: 80px;
     display: flex;
     flex-direction: column;
@@ -101,6 +103,7 @@ footer {
 
 .copyright {
     font-size: .8rem;
+    color: white;
     text-align: center;
 }
 

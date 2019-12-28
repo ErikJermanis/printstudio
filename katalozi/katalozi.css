@@ -4,6 +4,11 @@
     font-size: 16px;
     box-sizing: border-box;
     font-family: 'Open Sans', sans-serif;
+    color: black;
+}
+
+body {
+    background: white;
 }
 
 /*===========================================================================================================
@@ -107,7 +112,6 @@ Footer
 
 footer {
     background: #282165;
-    color: white;
     height: 80px;
     display: flex;
     flex-direction: column;
@@ -115,6 +119,7 @@ footer {
 }
 
 .copyright {
+    color: white;
     font-size: .8rem;
     text-align: center;
 }
