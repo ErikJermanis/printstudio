@@ -35,6 +35,25 @@ header h1::first-letter {
     color: rgb(255, 235, 58);
 }
 
+header ul {
+    list-style: none;
+    display: flex;
+    margin-top: 8px;
+    margin-right: 9vw;
+}
+header ul li {
+    margin-right: 2em;
+}
+
+header ul li a {
+    padding: 8px;
+}
+
+header ul li a:hover {
+    color: rgb(255, 235, 58);
+    transition: .1s;
+}
+
 .store-wrapper {
     width: 95%;
     max-width: 1150px;
