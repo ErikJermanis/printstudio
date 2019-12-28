@@ -12,12 +12,19 @@ body {
 header {
     display: flex;
     justify-content: space-between;
-    background: rgb(83, 95, 94);
+    background: #282165;
     height: 42px;
     position: fixed;
     z-index: 1;
     top: 0;
     width: 100vw;
+}
+
+header img {
+    margin-top: 5px;
+    width: 90px;
+    height: 72px;
+    margin-left: 9vw;
 }
 
 header a, header h1 {
@@ -50,7 +57,7 @@ header ul li a {
 }
 
 header ul li a:hover {
-    color: rgb(255, 235, 58);
+    color: #8bdeff;
     transition: .1s;
 }
 
@@ -58,7 +65,7 @@ header ul li a:hover {
     width: 95%;
     max-width: 1150px;
     margin: 0 auto;
-    margin-top: 50px;
+    margin-top: 80px;
     margin-bottom: 50px;
     font-size: .95rem;
 }
@@ -84,7 +91,7 @@ button:hover {
 }
 
 footer {
-    background: rgb(83, 95, 94);
+    background: #282165;
     color: white;
     height: 80px;
     display: flex;

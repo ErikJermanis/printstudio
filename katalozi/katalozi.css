@@ -13,7 +13,7 @@ Navigacija
 header {
     display: flex;
     justify-content: space-between;
-    background: rgb(83, 95, 94);
+    background: #282165;
     height: 42px;
     position: fixed;
     z-index: 2;
@@ -21,19 +21,17 @@ header {
     width: 100vw;
 }
 
+header img {
+    margin-top: 5px;
+    width: 90px;
+    height: 72px;
+    margin-left: 9vw;
+}
+
 header a, header h1 {
     color: white;
     margin: auto 0;
     text-decoration: none;
-}
-
-header h1 {
-    margin-left: 10vw;
-    font-size: 2rem;
-}
-
-header h1::first-letter {
-    color: rgb(255, 235, 58);
 }
 
 header ul {
@@ -52,7 +50,7 @@ header ul li a {
 }
 
 header ul li a:hover {
-    color: rgb(255, 235, 58);
+    color: #8bdeff;
     transition: .1s;
 }
 
@@ -64,8 +62,8 @@ Stranica
     width: 95%;
     max-width: 1150px;
     margin: auto;
-    margin-top: 42px;
-    min-height: calc(100vh - 130px);
+    margin-top: 72px;
+    min-height: calc(100vh - 152px);
 }
 
 .kataloziH1 {
@@ -108,7 +106,7 @@ Footer
 ===========================================================================================================*/
 
 footer {
-    background: rgb(83, 95, 94);
+    background: #282165;
     color: white;
     height: 80px;
     display: flex;
@@ -155,10 +153,6 @@ footer {
 }
 
 @media screen and (max-width: 768px) {
-    .kataloziWrapper {
-        min-height: calc(100vh - 190px);
-    }
-
     footer {
         height: 140px;
     }
